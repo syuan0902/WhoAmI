@@ -11,7 +11,7 @@ namespace WhoAmI
 
            
 
-            Console.WriteLine("想認識Mary請輸入1，想認識Cindy請輸入2，交換兩人身分請輸入3");
+            Console.WriteLine("想認識Mary請輸入1，想認識Cindy請輸入2，交換兩人身分請輸入3，讓Mary留言給Cindy請輸入5");
 
             while(true)
             {
@@ -40,6 +40,11 @@ namespace WhoAmI
                     Cindy = m_holder;
 
                     Console.WriteLine("天靈靈，地靈靈，交換兩人身分!!");
+                }
+
+                else if (m_customInput == '5')
+                {
+                    Mary.SpeakTo(Cindy, "嗨，Cindy!!");
                 }
 
                 else return;

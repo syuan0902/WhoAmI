@@ -16,5 +16,16 @@ namespace WhoAmI
             Console.WriteLine("我是" + m_name);
             Console.WriteLine("我今年" + m_age + "歲");
         }
+
+        public void HearMessage(string message, Call whoSaidIt)
+        {
+            Console.WriteLine(m_name + " 收到一個訊息");
+            Console.WriteLine(whoSaidIt.m_name + " 說：" + message);
+        }
+
+        public void SpeakTo(Call whoToTalkTo, string message) 
+        {
+            whoToTalkTo.HearMessage(message, this);
+        }
     }
 }
